@@ -1,0 +1,385 @@
+:root {
+    --color10: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+html {
+    background-color: var(--color1);
+    height: auto;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #1f201f;
+}
+
+canvas{
+    position: absolute;
+    z-index: -1;
+}
+
+.Header {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+#logo {
+    margin: 20px;
+}
+
+#title {
+    font-size: 100px;
+    font-family: 'Space Mono', monospace;
+    height: 100%;
+    color: var(--color10);
+    width: 100%;
+    margin: 25px;
+    text-align: center;
+    letter-spacing: 4px;
+    
+}
+
+.Main {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    padding-left: 10px;
+    align-items: center;
+    z-index: -1;
+    height: 80%;
+    min-width: 675px;
+}
+
+.Main-textarea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.Card {
+    padding: relative;
+    width: 750px;
+    min-height: 500px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    font-size: 40px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 10);
+    border-left: 1px solid rgba(255, 255, 255, 10);
+    backdrop-filter: blur(5px);
+    color: var(--color10);
+}
+
+.Output {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    padding: 30px;
+    border-style: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+p {
+    width: 100%;
+    padding: 0px;
+    text-align: justify;
+    word-wrap: break-word;
+    padding: 20px;
+    min-height: 300px;
+}
+
+a {
+    position: relative;
+    padding: 40px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 40px;
+    transition: 1s;
+    font-size: 40px;
+    font-family: 'Space Mono', monospace;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+        0 0 30px var(--clr),
+        0 0 60px var(--clr),
+        0 0 100px var(--clr);
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 400px;
+    background: var(--clr);
+    transition: 1s;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.33s 8 var(--i));
+}
+
+a:hover::before {
+    width: 100%;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background-color: #1f201f;
+    transition: 0.5s;
+}
+
+a:hover::after {
+    background: var(--clr);
+}
+
+a span {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    opacity: 0.5s;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: 0.5s;
+}
+
+a:hover span {
+    opacity: 1;
+}
+
+#copy {
+    display: none;
+}
+
+footer{
+    color: #fff;
+    width: 100vw;
+    height: auto;
+    background-color: #1f201f;
+    margin: 0;
+}
+
+.devInfo{
+    width: 100%;
+    display: flex;
+}
+
+#textFooter{
+    all: unset;
+    width: 80vw;
+    text-align: right;
+    padding-top: 40px;
+    font-size: 30px;
+    padding-left: 10px;
+    white-space: nowrap;
+}
+
+#name{
+    all: unset;
+    padding-top: 40px;
+    padding-left: 10px;
+    z-index: 1;
+    white-space: nowrap;
+    font-size: 30px;
+}
+
+#github{
+    width: 130px;
+    height: 130px;
+    padding: 20px;
+}
+
+#github:hover {
+    cursor: pointer;
+    
+}
+
+#linkedin{
+    width: 130px;
+    height: 130px;
+    padding: 20px;
+    margin-right: 40px;
+}
+
+#linkedin:hover{
+    cursor: pointer;
+}
+
+#info{
+    font-size: 15px;
+}
+
+#change{
+    display: block;
+    text-align: center;
+    font-size: 70px;
+}
+
+#repository{
+    display: block; 
+    padding: 10px; 
+    text-decoration: underline; 
+    cursor: pointer;
+}
+
+
+@media (min-width: 1000px) {
+    .BtnContainer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    a {
+        padding: 40px 60px;
+        font-size: 30px;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width:1400px) {
+    .Main {
+        flex-direction: row;
+    }
+
+    .Header {
+        height: 90px;
+    }
+
+    #title {
+        font-size: 70px;
+        margin-top: 5px;
+    }
+
+    .Main {
+        padding-bottom: 0px;
+    }
+
+    textarea {
+        min-width: 900px;
+        margin: 0px;
+
+    }
+
+    .Card {
+        margin-top: 5px;
+        font-size: 30px;
+        min-height: 430px;
+        border-top: 1px solid rgba(255, 255, 255, 1);
+        border-left: 1px solid rgba(255, 255, 255, 1);
+    }
+
+    a {
+        margin-top: 5px;
+        padding: 30px 60px;
+        font-size: 20px;
+        justify-content: space-between;
+    }
+
+    .Output {
+        min-height: 560px;
+    }
+
+
+    #textFooter{
+        all: unset;
+        width: 100%;
+        text-align: right;
+        padding: 20px;
+        font-size: 15px;
+    }
+    
+    #name{
+        all: unset;
+        padding: 20px;
+        width: 700px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #github{
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        font-size: 18px;
+        
+    }
+    
+    #github:hover {
+        cursor: pointer;
+        
+    }
+    
+    #linkedin{
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        margin-left: 10px;
+    }
+
+    #info{
+        font-size: 15px;
+    }
+}
+
+body {
+    font-family: 'Alatsi', sans-serif;
+    margin: 0;
+    overflow: hidden;
+    background: black;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .title {
+    font-size: 10vw;
+    color: white;
+  }
+  
+  canvas {
+    width: 100%;
+  }

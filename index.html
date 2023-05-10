@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Encriptador de Texto</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="Header">
+        <img id='logo' src="logo-aluraespanhol.svg" alt="logoALura">
+        <h1 id="title" data-value="ENCRIPTADOR DE TEXTO">ENCRIPTADOR DE TEXTO</h1>
+    </div>
+    <div class="Main">
+        <div class="Main-textarea">
+            <textarea class="Card" id="textInput" placeholder="Ingrese texto aqui ..."></textarea>
+            <div class="BtnContainer">
+                <div class="Btn"><a style="--clr: #b7ff00; --i:0" id="encrypt" href="#"><span>Encriptar</span></a></div>
+                <div class="Btn"><a style="--clr: #03e2ff; --i:1" id="decrypt" href="#"><span>Desencriptar</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="Output Card">
+            <p id="textOutput" data-value="No has ingresado ningun texto">
+                No has ingresado ningun texto
+                <span id="change">SYGMAV3</span>
+            </p>
+                        <div class="Btn"><a style="--clr: #00ffbb; --i:2;" id="copy" href="#"><span>Copiar</span></a></div>
+        </div>
+    </div>
+    <footer>
+        <div class="devInfo">
+            <p id="textFooter">Desarrollado por
+            <p id='name'> Andrés L. Ospina</p>
+            </p>
+            <img id='github' src="github.png" alt="github"
+                onclick="window.location.href='https://github.com/SyGmAV3'">
+            <img id="linkedin" src="linkedin.png" alt="linkedin"
+                onclick="window.location.href='https://www.linkedin.com/in/sygmav3/'">
+        </div>
+        <p id="info">
+            Challenge del programa ONE G5 de Oracle + Alura Latam
+            <br>
+            <br>
+            <strong>Challenge ONE Sprint 01:</strong>
+            Construye un encriptador de texto con Javascript.
+            <br>
+            <br>
+            Descripcion:
+            Aplicación que encripta textos, así podrás intercambiar mensajes secretos con otras personas que sepan el
+            secreto de la encriptación utilizada.
+            <span id='repository' onclick="window.location.href='https://github.com/SyGmAV3/Encriptador'">Repositorio GitHub</span>
+        </p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".Output"), {
+            max: 5,
+            speed: 100,
+            glare: true,
+        });
+
+    </script>
+</body>
+
+</html>
